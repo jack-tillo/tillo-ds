@@ -1,0 +1,17 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import Component from './src/Component.vue';
+
+<Meta title='Component' component={Component} />
+
+# Component
+
+A component.
+
+<Story name='basic' height='200px'>{{
+  components: { Component },
+  template: '<component>Minue</component>',
+}}</Story>
+
+## Props
+
+<Props of={Component} />

@@ -1,0 +1,14 @@
+{
+  "name": "@tillo-ds/text-input",
+  "version": "0.0.0",
+  "description": "Tillo Text Input component",
+  "main": "dist/index.js",
+  "module": "src/index.js",
+  "scripts": {
+    "build": "vue-cli-service build --target lib ./src/index.js"
+  },
+  "gitHead": "fef823df5d0c14de9948660dab58c50ffb991a4c",
+  "publishConfig": {
+    "access": "public"
+  }
+}
