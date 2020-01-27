@@ -1,6 +1,6 @@
 {
   "name": "@tillo-ds/button",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Tillo Button component",
   "main": "dist/index.js",
   "module": "src/index.js",
