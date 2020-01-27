@@ -1,0 +1,21 @@
+{
+  "name": "tillo-ds",
+  "version": "0.0.0",
+  "description": "Tillo Component Library",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jack-tillo/tillo-ds.git"
+  },
+  "author": "Jack Chapman",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/jack-tillo/tillo-ds/issues"
+  },
+  "homepage": "https://github.com/jack-tillo/tillo-ds#readme",
+  "devDependencies": {
+    "@vue/cli-service": "^4.1.2",
+    "lerna": "^3.20.2",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
