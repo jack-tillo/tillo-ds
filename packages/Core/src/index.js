@@ -1,5 +1,5 @@
-import Button from '@tillo/button';
-import TextInput from '@tillo/text-input';
+import Button from '@tillo-ds/button';
+import TextInput from '@tillo-ds/text-input';
 export default {
     TilloButton: Button,
     TilloTextInput: TextInput
