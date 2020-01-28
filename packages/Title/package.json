@@ -1,6 +1,6 @@
 {
   "name": "@tillo-ds/title",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Tillo Title",
   "main": "dist/index.js",
   "module": "src/index.js",
