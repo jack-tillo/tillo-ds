@@ -1,6 +1,6 @@
 {
     "name": "@tillo-ds/core",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Tillo Vue component library",
     "main": "dist/index.js",
     "module": "src/index.js",
@@ -8,8 +8,8 @@
         "build": "vue-cli-service build --target lib ./src/index.js"
     },
     "dependencies": {
-        "@tillo-ds/button": "^0.0.1",
-        "@tillo-ds/text-input": "^0.0.1"
+        "@tillo-ds/button": "^0.0.2",
+        "@tillo-ds/text-input": "^0.0.2"
     },
     "gitHead": "fef823df5d0c14de9948660dab58c50ffb991a4c",
     "publishConfig": {
