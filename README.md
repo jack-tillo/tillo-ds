@@ -24,6 +24,11 @@ Install dependencies (cd into root level before installing)
 npm install
 ```
 
+After installing, bootsrap Lerna so we can publish to the NPM repo
+```bash
+npm run bootstrap
+```
+
 Run storybook during dev
 
 ```bash
