@@ -5,7 +5,7 @@ Tillo Component library
 ## Install
 
 
-For developing with components
+For developing with @tillo-ds components
 
 ```bash
 npm install @tillo-ds/core
@@ -15,6 +15,8 @@ For individual components
 
 * [button](./packages/Button/README.md)
 * [text-input](./packages/TextInput/README.md)
+
+***
 
 ## Development
 
