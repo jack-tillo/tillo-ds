@@ -1,14 +1,5 @@
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
-	else if(typeof define === 'function' && define.amd)
-		define([], factory);
-	else if(typeof exports === 'object')
-		exports["core"] = factory();
-	else
-		root["core"] = factory();
-})((typeof self !== 'undefined' ? self : this), function() {
-return /******/ (function(modules) { // webpackBootstrap
+module.exports =
+/******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -119,27 +110,25 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: /Users/jack/development/tillo-ds/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"4b7c92c1-vue-loader-template"}!/Users/jack/development/tillo-ds/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/Users/jack/development/tillo-ds/node_modules/cache-loader/dist/cjs.js??ref--0-0!/Users/jack/development/tillo-ds/node_modules/vue-loader/lib??vue-loader-options!../Button/src/Button.vue?vue&type=template&id=cb320cea&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('button',[_vm._t("default")],2)}
+// CONCATENATED MODULE: /Users/jack/development/tillo-ds/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"4b7c92c1-vue-loader-template"}!/Users/jack/development/tillo-ds/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/Users/jack/development/tillo-ds/node_modules/cache-loader/dist/cjs.js??ref--0-0!/Users/jack/development/tillo-ds/node_modules/vue-loader/lib??vue-loader-options!./src/Title.vue?vue&type=template&id=76bbe99b&scoped=true&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div')}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ../Button/src/Button.vue?vue&type=template&id=cb320cea&scoped=true&
+// CONCATENATED MODULE: ./src/Title.vue?vue&type=template&id=76bbe99b&scoped=true&
 
-// CONCATENATED MODULE: /Users/jack/development/tillo-ds/node_modules/cache-loader/dist/cjs.js??ref--0-0!/Users/jack/development/tillo-ds/node_modules/vue-loader/lib??vue-loader-options!../Button/src/Button.vue?vue&type=script&lang=js&
-//
-//
+// CONCATENATED MODULE: /Users/jack/development/tillo-ds/node_modules/cache-loader/dist/cjs.js??ref--0-0!/Users/jack/development/tillo-ds/node_modules/vue-loader/lib??vue-loader-options!./src/Title.vue?vue&type=script&lang=js&
 //
 //
 //
 //
 
-/* harmony default export */ var Buttonvue_type_script_lang_js_ = ({
+/* harmony default export */ var Titlevue_type_script_lang_js_ = ({
     
 });
 
-// CONCATENATED MODULE: ../Button/src/Button.vue?vue&type=script&lang=js&
- /* harmony default export */ var src_Buttonvue_type_script_lang_js_ = (Buttonvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/Title.vue?vue&type=script&lang=js&
+ /* harmony default export */ var src_Titlevue_type_script_lang_js_ = (Titlevue_type_script_lang_js_); 
 // CONCATENATED MODULE: /Users/jack/development/tillo-ds/node_modules/vue-loader/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
 
@@ -235,7 +224,7 @@ function normalizeComponent (
   }
 }
 
-// CONCATENATED MODULE: ../Button/src/Button.vue
+// CONCATENATED MODULE: ./src/Title.vue
 
 
 
@@ -244,80 +233,21 @@ function normalizeComponent (
 /* normalize component */
 
 var component = normalizeComponent(
-  src_Buttonvue_type_script_lang_js_,
+  src_Titlevue_type_script_lang_js_,
   render,
   staticRenderFns,
   false,
   null,
-  "cb320cea",
+  "76bbe99b",
   null
   
 )
 
-/* harmony default export */ var Button = (component.exports);
-// CONCATENATED MODULE: ../Button/src/index.js
-
-/* harmony default export */ var src = (Button);
-
-// CONCATENATED MODULE: /Users/jack/development/tillo-ds/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"4b7c92c1-vue-loader-template"}!/Users/jack/development/tillo-ds/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/Users/jack/development/tillo-ds/node_modules/cache-loader/dist/cjs.js??ref--0-0!/Users/jack/development/tillo-ds/node_modules/vue-loader/lib??vue-loader-options!../TextInput/src/TextInput.vue?vue&type=template&id=70943ece&scoped=true&
-var TextInputvue_type_template_id_70943ece_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('input',{attrs:{"type":"text"}})}
-var TextInputvue_type_template_id_70943ece_scoped_true_staticRenderFns = []
-
-
-// CONCATENATED MODULE: ../TextInput/src/TextInput.vue?vue&type=template&id=70943ece&scoped=true&
-
-// CONCATENATED MODULE: /Users/jack/development/tillo-ds/node_modules/cache-loader/dist/cjs.js??ref--0-0!/Users/jack/development/tillo-ds/node_modules/vue-loader/lib??vue-loader-options!../TextInput/src/TextInput.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-
-/* harmony default export */ var TextInputvue_type_script_lang_js_ = ({
-    
-});
-
-// CONCATENATED MODULE: ../TextInput/src/TextInput.vue?vue&type=script&lang=js&
- /* harmony default export */ var src_TextInputvue_type_script_lang_js_ = (TextInputvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ../TextInput/src/TextInput.vue
-
-
-
-
-
-/* normalize component */
-
-var TextInput_component = normalizeComponent(
-  src_TextInputvue_type_script_lang_js_,
-  TextInputvue_type_template_id_70943ece_scoped_true_render,
-  TextInputvue_type_template_id_70943ece_scoped_true_staticRenderFns,
-  false,
-  null,
-  "70943ece",
-  null
-  
-)
-
-/* harmony default export */ var TextInput = (TextInput_component.exports);
-// CONCATENATED MODULE: ../TextInput/src/index.js
-
-/* harmony default export */ var TextInput_src = (TextInput);
-
-// CONCATENATED MODULE: ./src/index.js
-
-
-/* harmony default export */ var src_0 = ({
-    TilloButton: src,
-    TilloTextInput: TextInput_src
-});
-
-
-
+/* harmony default export */ var Title = (component.exports);
 // CONCATENATED MODULE: /Users/jack/development/tillo-ds/node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
-/* concated harmony reexport TilloButton */__webpack_require__.d(__webpack_exports__, "TilloButton", function() { return src; });
-/* concated harmony reexport TilloTextInput */__webpack_require__.d(__webpack_exports__, "TilloTextInput", function() { return TextInput_src; });
 
 
-/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (src_0);
+/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (Title);
 
 
 
@@ -366,6 +296,5 @@ var TextInput_component = normalizeComponent(
 
 /***/ })
 
-/******/ });
-});
-//# sourceMappingURL=core.umd.js.map
+/******/ })["default"];
+//# sourceMappingURL=title.common.js.map
