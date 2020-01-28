@@ -293,19 +293,68 @@ var TextInput_component = normalizeComponent(
 
 /* harmony default export */ var TextInput_src = (TextInput);
 
+// CONCATENATED MODULE: /Users/jack/development/tillo-ds/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"4b7c92c1-vue-loader-template"}!/Users/jack/development/tillo-ds/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/Users/jack/development/tillo-ds/node_modules/cache-loader/dist/cjs.js??ref--0-0!/Users/jack/development/tillo-ds/node_modules/vue-loader/lib??vue-loader-options!../Title/src/Title.vue?vue&type=template&id=5264a95d&scoped=true&
+var Titlevue_type_template_id_5264a95d_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._t("default")],2)}
+var Titlevue_type_template_id_5264a95d_scoped_true_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ../Title/src/Title.vue?vue&type=template&id=5264a95d&scoped=true&
+
+// CONCATENATED MODULE: /Users/jack/development/tillo-ds/node_modules/cache-loader/dist/cjs.js??ref--0-0!/Users/jack/development/tillo-ds/node_modules/vue-loader/lib??vue-loader-options!../Title/src/Title.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ var Titlevue_type_script_lang_js_ = ({
+    
+});
+
+// CONCATENATED MODULE: ../Title/src/Title.vue?vue&type=script&lang=js&
+ /* harmony default export */ var src_Titlevue_type_script_lang_js_ = (Titlevue_type_script_lang_js_); 
+// CONCATENATED MODULE: ../Title/src/Title.vue
+
+
+
+
+
+/* normalize component */
+
+var Title_component = normalizeComponent(
+  src_Titlevue_type_script_lang_js_,
+  Titlevue_type_template_id_5264a95d_scoped_true_render,
+  Titlevue_type_template_id_5264a95d_scoped_true_staticRenderFns,
+  false,
+  null,
+  "5264a95d",
+  null
+  
+)
+
+/* harmony default export */ var Title = (Title_component.exports);
+// CONCATENATED MODULE: ../Title/src/index.js
+
+/* harmony default export */ var Title_src = (Title);
+
 // CONCATENATED MODULE: ./src/index.js
+
 
 
 /* harmony default export */ var src_0 = ({
     TilloButton: src,
-    TilloTextInput: TextInput_src
+    TilloTextInput: TextInput_src,
+    TilloTitle: Title_src
 });
+
 
 
 
 // CONCATENATED MODULE: /Users/jack/development/tillo-ds/node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 /* concated harmony reexport TilloButton */__webpack_require__.d(__webpack_exports__, "TilloButton", function() { return src; });
 /* concated harmony reexport TilloTextInput */__webpack_require__.d(__webpack_exports__, "TilloTextInput", function() { return TextInput_src; });
+/* concated harmony reexport TilloTitle */__webpack_require__.d(__webpack_exports__, "TilloTitle", function() { return Title_src; });
 
 
 /* harmony default export */ var entry_lib = __webpack_exports__["default"] = (src_0);
