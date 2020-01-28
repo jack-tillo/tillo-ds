@@ -4,10 +4,11 @@ Tillo Component library
 
 ## Install
 
-For all components
+
+For developing with components
 
 ```bash
-npm install @tillo/core
+npm install @tillo-ds/core
 ```
 
 For individual components
@@ -17,7 +18,7 @@ For individual components
 
 ## Development
 
-Install dependencies
+Install dependencies (cd into root level before installing)
 
 ```bash
 npm install
