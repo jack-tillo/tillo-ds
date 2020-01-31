@@ -1,5 +1,5 @@
 <template>
-    <button>
+    <button class="destructive-medium">
         <slot/>
     </button>
 </template>
@@ -10,6 +10,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
+    @import './styles/main';
 
+    .destructive-medium {
+        color: #ffccff;
+        @include mediumBtn('destructive');
+    }
 </style>

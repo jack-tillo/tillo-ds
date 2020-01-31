@@ -1,0 +1,240 @@
+@import '@tillo-ds/styles/colours';
+//=====================================================
+// The idea with these button styles (mixins)
+// is that a style is not being imposed on you,
+// or directly connected to a component.
+// The button has no props. All styles are mixins
+// and can be re-used/stacked/added-to.
+// If we maintain this approach,
+// buttons can be built and (re)styled easily
+// without having to recompile components etc.
+
+// I suggest leaving this file for Jay's default
+// original styles and creating another .scss file
+// that can be used to create an entirely different design,
+// using the same approach/idea. 
+
+// Simple base styles. Leave please.
+@mixin button () {
+  display: flex;
+  justify-content: flex-start;
+  text-transform: uppercase;
+  align-items: center;
+}
+
+@mixin variant ($text, $bg) {
+  color: map-get($text, "up");
+  background-color: map-get($bg, "up");
+  border: 1px solid map-get($bg, "up");
+  &:hover {
+    color: map-get($text, "hover");
+    background-color: map-get($bg, "hover");
+    border: 1px solid map-get($bg, "hover");
+  }
+}
+
+@mixin outlineOnly ($bgColour:transparent) {
+  background-color: $bgColour;
+  &:hover {
+    background-color: $bgColour;
+  }
+}
+
+// Variations of internal styles.
+// Add here and @include in your styles.
+// DONT change these please.
+// If you want to do something that is widly
+// different than what is on offer here,
+// consider writing a mixin to make it useable,
+// or implement it in your own app.
+
+@mixin withIcon ($w:16px, $h:16px, $isIconAlone:'no') {
+  display: flex;
+  // Center the icon if alone
+  @if ($isIconAlone == 'yes') {
+    position: relative;
+  }
+  
+  svg {
+    // Center the icon if alone
+    @if ($isIconAlone == 'yes') {
+      position: absolute;
+      left: -50%;
+      right: -50%;
+      top: -50%;
+      bottom: -50%;
+      margin: auto;
+    }
+    width: $w;
+    height: $h;
+  }
+}
+
+// More variations as defined by Jay's designs
+@mixin isSmallAction () {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 13px;
+}
+
+@mixin isMediumAction () {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 13px;
+}
+
+@mixin isLargeAction () {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 13px;
+}
+
+@mixin isTableAction () {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 8px;
+  padding-bottom: 9px;
+  font-size: 15px;
+}
+
+// Core mixins that can be imported
+// anywhere in the hub without compiling
+//=====================================================
+
+// DESTRUCTIVE VARIANT
+// Cancel, Delete, Clear, Remove
+@mixin isDestructive () {
+  $text: ("up": $charcoal, "hover": $charcoal );
+  $bg: ("up": $red, "hover": $red-hover);
+  @include variant($text, $bg);
+}
+
+// POSITIVE VARIANT
+// The main positive action we want someone to take
+// Ok, Proceed, Go, Search, Next
+@mixin isPositive () {
+  $text: ("up": $charcoal, "hover": $charcoal );
+  $bg: ("up": $emerald, "hover": $emerald-hover);
+  @include variant($text, $bg);
+}
+
+// NEUTRAL VARIANT
+// A positive, non-destrucive button (part of a choice?)
+@mixin isNeutral () {
+  $text: ("up": $charcoal, "hover": $charcoal );
+  $bg: ("up": $aqua, "hover": $aqua-hover);
+  @include variant($text, $bg);
+}
+
+// DISABLED VARIANT
+// unavailable, incomplete, invalid
+@mixin isDisabled () {
+  $text: ("up": $dark-grey, "hover": $charcoal );
+  $bg: ("up": $medium-grey, "hover": $semi-dark-grey);
+  @include variant($text, $bg);
+}
+
+@mixin variation ($variation) {
+  @if ($variation == 'destructive') {
+    @include isDestructive();
+  }
+  @if ($variation == 'positive') {
+    @include isPositive();
+  }
+  @if ($variation == 'neutral') {
+    @include isNeutral();
+  }
+  @if ($variation == 'disabled') {
+    @include isDisabled();
+  }
+}
+
+//=====================================================
+//=====================================================
+// Shortcuts
+// YOU DON"T HAVE TO USE THESE.
+// DEFINE YOUR CUSTOM BUTTON AS A MIXIN
+// Your button can be made up from any of the
+// mixins above. Use these if you want to be quick.
+// Add more utility mixins above if you want to make
+// attributes of your custom button available to other mixins.
+@mixin iconBtn ($variation, $w, $h) {
+  @include withIcon($w, $h, 'yes');
+  @include variation($variation);
+}
+
+@mixin iconLineBtn ($variation, $w, $h, $bgColour:transparent) {
+  @include withIcon($w, $h, 'yes');
+  @include variation($variation);
+  @include outlineOnly($bgColour);
+}
+
+@mixin smallBtn ($variation) {
+  @include button();
+  @include isSmallAction();
+  @include variation($variation);
+}
+
+@mixin smallLineBtn ($variation, $bgColour:transparent) {
+  @include button();
+  @include isSmallAction();
+  @include variation($variation);
+  @include outlineOnly($bgColour);
+}
+
+@mixin mediumBtn ($variation) {
+  @include button();
+  @include isMediumAction();
+  @include variation($variation);
+}
+
+@mixin mediumLineBtn ($variation, $bgColour:transparent) {
+  @include button();
+  @include isMediumAction();
+  @include variation($variation);
+  @include outlineOnly($bgColour);
+}
+
+@mixin largeBtn ($variation) {
+  @include button();
+  @include isLargeAction();
+  @include variation($variation);
+}
+
+@mixin largeLineBtn ($variation, $bgColour:transparent) {
+  @include button();
+  @include isLargeAction();
+  @include variation($variation);
+  @include outlineOnly($bgColour);
+}
+
+@mixin tableBtn ($variation, $bgColour:transparent) {
+  @include button();
+  @include isTableAction();
+  @include variation($variation);
+  @include outlineOnly($bgColour);
+}
+
+// The assumption here is that the button
+// contains two elements, the phrasing block (label)
+// and the icon. We're affecting the icon here.
+// Again, if you're looking to do something different,
+// write a new mixin that can be included without
+// clobering eveything else
+@mixin hasIconOnLeft () {
+  >:first-child {
+    margin-right: 10px;
+  }
+}
+
+@mixin hasIconOnRight () {
+  >:last-child {
+    margin-left: 10px;
+  }
+}
