@@ -9,7 +9,7 @@
                 "*.md",
                 "*.stories.(js|mdx)"
             ],
-            "message": "release: %s"
+            "message": "release"
         }
     }
 }
