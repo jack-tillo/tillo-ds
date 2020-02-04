@@ -1,6 +1,6 @@
 {
   "name": "@tillo-ds/dropdown",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Tillo Dropdown Component",
   "main": "dist/index.js",
   "module": "src/index.js",
@@ -12,7 +12,7 @@
     "access": "public"
   },
   "dependencies": {
-      "popper.js": "1.16.1",
-      "@tillo-ds/styles": "^0.0.3"
+    "@tillo-ds/styles": "^0.0.4",
+    "popper.js": "1.16.1"
   }
 }

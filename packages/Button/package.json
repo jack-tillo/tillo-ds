@@ -1,6 +1,6 @@
 {
   "name": "@tillo-ds/button",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Tillo Button component",
   "main": "dist/index.js",
   "module": "src/index.js",
@@ -12,6 +12,6 @@
     "access": "public"
   },
   "devDependencies": {
-    "@tillo-ds/styles": "0.0.3"
+    "@tillo-ds/styles": "^0.0.4"
   }
 }
