@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
     stories: ['../packages/**/*.stories.(js|mdx)'],
-    addons: ['@storybook/addon-docs'],
+    addons: ['@storybook/addon-docs', '@storybook/addon-actions/register'],
 
     webpackFinal: async (config, { configType }) => {
         // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'

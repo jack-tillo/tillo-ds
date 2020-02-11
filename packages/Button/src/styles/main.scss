@@ -20,6 +20,7 @@
   justify-content: flex-start;
   text-transform: uppercase;
   align-items: center;
+  cursor: pointer;
 }
 
 @mixin variant ($text, $bg) {
@@ -158,7 +159,7 @@
 //=====================================================
 //=====================================================
 // Shortcuts
-// YOU DON"T HAVE TO USE THESE.
+// YOU DON'T HAVE TO USE THESE.
 // DEFINE YOUR CUSTOM BUTTON AS A MIXIN
 // Your button can be made up from any of the
 // mixins above. Use these if you want to be quick.
@@ -224,7 +225,7 @@
 // The assumption here is that the button
 // contains two elements, the phrasing block (label)
 // and the icon. We're affecting the icon here.
-// Again, if you're looking to do something different,
+// Again, if youre looking to do something different,
 // write a new mixin that can be included without
 // clobering eveything else
 @mixin hasIconOnLeft () {

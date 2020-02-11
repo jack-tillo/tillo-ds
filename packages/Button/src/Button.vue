@@ -1,12 +1,15 @@
 <template>
-    <button class="destructive-medium">
+    <button @click="$emit('click')">
+        <!--
+        @slot Default slot. Set to display flex
+		-->
         <slot/>
     </button>
 </template>
 
 <script>
 export default {
-    
+
 }
 </script>
 
