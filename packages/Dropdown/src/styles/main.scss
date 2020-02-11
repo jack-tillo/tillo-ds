@@ -1,0 +1,128 @@
+@import '@tillo-ds/styles/colours';
+@import '@tillo-ds/styles/triangle';
+.dropdown-container {
+    position: relative;
+}
+
+.trigger-container {
+    display: flex;
+    flex-direction: column;
+    .trigger-label {
+        font-family: 'Roboto';
+        margin-bottom: 4px;
+        font-size: 18px;
+        color: $dark-grey;
+        .trigger-asterix {
+            font-family: 'Roboto';
+            color: $red;
+            margin-left: 3px;
+        }
+    }
+    .trigger-button {
+        background: #fff;
+        font-family: 'Roboto';
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+        border: 1px solid $medium-grey;
+        padding: 10px;
+        .trigger-text {
+            margin: 0;
+            font-size: 16px;
+            color: $dark-grey;
+            overflow-x: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            &.placeholder {
+                color: $placeholder-grey;
+            }
+        }
+        .trigger-icon {
+            width: 13px;
+            height: 13px;
+            color: $placeholder-grey;
+            transition: all 0.2s ease;
+            transform: rotate(90deg);
+            &.rotated {
+                transform: rotate(270deg);
+            }
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &.trigger-disabled {
+        cursor: not-allowed;
+        .trigger-button {
+            cursor: not-allowed;
+            .trigger-text {
+                color: $placeholder-grey;
+            }
+        }
+    }
+}
+
+.arrow {
+    position: absolute;
+    z-index: 50;
+}
+
+.popper-container {
+    z-index: 50;
+    position: absolute;
+    width: 100%;
+    &[x-placement='bottom'],
+    &[x-placement='bottom-start'],
+    &[x-placement='bottom-end'] {
+        padding-top: 5px;
+        .arrow {
+            @include withTriangle(bottom, 5px, $medium-grey);
+            top: 0px;
+        }
+    }
+    &[x-placement='top'],
+    &[x-placement='top-start'],
+    &[x-placement='top-end'] {
+        padding-bottom: 5px;
+        .arrow {
+            @include withTriangle(top, 5px, $medium-grey);
+            bottom: 0px;
+        }
+    }
+}
+
+.option-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $medium-grey;
+    .option-button {
+        font-family: 'Roboto';
+        &.selected {
+            background: $cool-grey;
+        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        height: 40px;
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid $medium-grey;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+        &:last-child {
+            border-bottom: none;
+        }
+        &:hover {
+            background: $cool-grey;
+            cursor: pointer;
+        }
+        .option-text {
+            margin: 0;
+            text-align: left;
+            font-size: 16px;
+            color: $dark-grey;
+        }
+    }
+}
