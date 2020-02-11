@@ -1,0 +1,24 @@
+@import './colours.scss';
+
+@mixin withTriangle($facing, $size: 5px, $colour: $charcoal) {
+    @if ($facing == right) {
+        border-right: $size solid $colour;
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+    }
+    @if ($facing == left) {
+        border-left: $size solid $colour;
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+    }
+    @if ($facing == top) {
+        border-top: $size solid $colour;
+        border-right: $size solid transparent;
+        border-left: $size solid transparent;
+    }
+    @if ($facing == bottom) {
+        border-bottom: $size solid $colour;
+        border-right: $size solid transparent;
+        border-left: $size solid transparent;
+    }
+}
