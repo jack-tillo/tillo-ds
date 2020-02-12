@@ -1,0 +1,183 @@
+import { Meta, Story} from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import '!style-loader!css-loader!sass-loader!./src/styles/types.scss';
+
+<Meta title='Button [native]'/>
+
+# Native Button
+
+A button can be built up from the native browser button.<br/>
+The class applied can reference a mixin to apply the desired style.
+
+## Props
+No props needed here as this is not a component, but an example <br/>
+of how the button styles can be applied to a native button
+
+```css
+@import '@tillo-ds/button/styles';
+
+.your-button-class {
+  @include largeBtn($variant);
+  // or
+  @include mediumBtn($variant);
+  // or
+  @include smallBtn($variant);
+}
+```
+```html
+<button class="your-button-class"></button>
+<!-- or -->
+<a class="your-button-class" href="https://tillo.io" ></a>
+```
+
+## Stories
+
+### Destrcutive styles
+```scss
+.destructive-large {
+  @include largeBtn('destructive');
+}
+.destructive-medium {
+  @include mediumBtn('destructive');
+}
+.destructive-small {
+  @include smallBtn('destructive');
+}
+```
+
+<Story name='[solid] Destructive' height='100px'>{{
+  methods: {
+    click: action('Button was clicked')
+  },
+  template: `
+    <div>
+      <div> 
+        <div style="display:flex; align-items:start;">
+          <button class="destructive-large" @click="click">Destructive large</button>
+          <button class="destructive-medium" @click="click">Destructive medium</button>
+          <button class="destructive-small" @click="click">Destructive small</button>
+        </div>
+      </div>
+    </div>
+  `,
+}}</Story>
+
+### Positive styles
+```scss
+.positive-large {
+  @include largeBtn('positive');
+}
+.positive-medium {
+  @include mediumBtn('positive');
+}
+.positive-small {
+  @include smallBtn('positive');
+}
+```
+<Story name='[solid] Positive' height='100px'>{{
+  methods: {
+    click: action('Button was clicked')
+  },
+  template: `
+    <div>
+      <div> 
+        <div style="display:flex; align-items:start;">
+          <button class="positive-large" @click="click">Positive large</button>
+          <button class="positive-medium" @click="click">Positive medium</button>
+          <button class="positive-small" @click="click">Positive small</button>
+        </div>
+      </div>
+    </div>
+  `,
+}}</Story>
+
+### Neutral styles
+```scss
+.neutral-large {
+  @include largeBtn('neutral');
+}
+.neutral-medium {
+  @include mediumBtn('neutral');
+}
+.neutral-small {
+  @include smallBtn('neutral');
+}
+```
+<Story name='[solid] Neutral' height='100px'>{{
+  methods: {
+    click: action('Button was clicked')
+  },
+  template: `
+    <div>
+      <div> 
+        <div style="display:flex; align-items:start;">
+          <button class="neutral-large" @click="click">Neutral large</button>
+          <button class="neutral-medium" @click="click">Neutral medium</button>
+          <button class="neutral-small" @click="click">Neutral small</button>
+        </div>
+      </div>
+    </div>
+  `,
+}}</Story>
+
+### As an 'a' tag
+The styles can also be applied to an <a>a</a> tag
+
+```scss
+.neutral-large {
+  @include largeBtn('neutral');
+}
+.neutral-medium {
+  @include mediumBtn('neutral');
+}
+.neutral-small {
+  @include smallBtn('neutral');
+}
+```
+<Story name='As <a> Tag' height='100px'>{{
+  methods: {
+    click: action('Button was clicked')
+  },
+  template: `
+    <div>
+      <div> 
+        <div style="display:flex; align-items:start;">
+          <a class="neutral-large" href="https://tillo.io">Neutral large</a>
+          <a class="neutral-medium" href="https://tillo.io">Neutral medium</a>
+          <a class="neutral-small" href="https://tillo.io">Neutral small</a>
+        </div>
+      </div>
+    </div>
+  `,
+}}</Story>
+
+### As an outline
+To complment the solid state, an outline style is available too.
+
+```scss
+.destructive-large-outline {
+  @include largeLineBtn('destructive');
+}
+.neutral-medium-outline {
+  @include mediumLineBtn('neutral');
+}
+.positive-small-outline {
+  @include smallLineBtn('positive');
+}
+```
+<Story name='[outline] Mixture' height='100px'>{{
+  methods: {
+    click: action('Button was clicked')
+  },
+  template: `
+    <div>
+      <div> 
+        <div style="display:flex; align-items:start;">
+          <a class="destructive-large-outline" href="https://tillo.io">Outline large</a>
+          <a class="neutral-medium-outline" href="https://tillo.io">Outline medium</a>
+          <a class="positive-small-outline" href="https://tillo.io">Outline small</a>
+        </div>
+      </div>
+    </div>
+  `,
+}}</Story>

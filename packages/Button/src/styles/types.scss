@@ -1,0 +1,80 @@
+@import 'main';
+
+.destructive-small {
+  @include smallBtn('destructive');
+}
+.destructive-large {
+  @include largeBtn('destructive');
+}
+.destructive-medium {
+  @include mediumBtn('destructive');
+}
+.destructive-large-outline {
+  @include largeLineBtn('destructive');
+}
+.destructive-medium-outline {
+  @include mediumLineBtn('destructive');
+}
+.destructive-small-outline {
+  @include smallLineBtn('destructive');
+}
+
+
+.neutral-large {
+  @include largeBtn('neutral');
+}
+.neutral-medium {
+  @include mediumBtn('neutral');
+}
+.neutral-small {
+  @include smallBtn('neutral');
+}
+.neutral-large-outline {
+  @include largeLineBtn('neutral');
+}
+.neutral-medium-outline {
+  @include mediumLineBtn('neutral');
+}
+.neutral-small-outline {
+  @include smallLineBtn('neutral');
+}
+
+
+.positive-large {
+  @include largeBtn('positive');
+}
+.positive-medium {
+  @include mediumBtn('positive');
+}
+.positive-small {
+  @include smallBtn('positive');
+}
+.positive-large-outline {
+  @include largeLineBtn('positive');
+}
+.positive-medium-outline {
+  @include mediumLineBtn('positive');
+}
+.positive-small-outline {
+  @include smallLineBtn('positive');
+}
+
+
+.disabled-large {
+  @include largeBtn('disabled');
+}
+.disabled-medium {
+  @include mediumBtn('disabled');
+}
+.disabled-small {
+  @include smallBtn('disabled');
+}
+.disabled-large-outline {
+  @include largeLineBtn('disabled');
+}
+.disabled-medium-outline {
+  @include mediumLineBtn('disabled');
+}
+.disabled-small-outline {
+  @include smallLineBtn('disabled');
+}

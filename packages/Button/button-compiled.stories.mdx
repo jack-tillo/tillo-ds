@@ -1,0 +1,98 @@
+import { Meta, Story, Props} from '@storybook/addon-docs/blocks';
+import tilloButton from './src/Button.vue';
+import { action } from '@storybook/addon-actions';
+
+<Meta title='Button [compiled]'/>
+
+# Compiled Button
+
+## Props
+<Props of={tilloButton} />
+
+
+## Stories
+
+### Large with positive variant
+```html
+<tillo-button
+  size="large"
+  variant="positive">
+    Proceed
+</tillo-button>
+```
+<Story name='Large' component='tilloButton' height='100px'>{{
+  methods: {
+    click: action('Button was clicked')
+  },
+  components: {
+    tilloButton
+  },
+  template:`
+    <div>
+      <tillo-button
+        @click="click"
+        size="large"
+        variant="positive">
+          Proceed
+      </tillo-button>
+    </div>
+  `
+}}</Story>
+
+
+### Medium with destrctive variant
+```html
+<tillo-button
+  size="medium"
+  variant="destructive">
+    Cancel
+</tillo-button>
+```
+<Story name='Medium' component='tilloButton' height='100px'>{{
+  methods: {
+    click: action('Button was clicked')
+  },
+  components: {
+    tilloButton
+  },
+  template:`
+    <div>
+      <tillo-button
+        @click="click"
+        size="medium"
+        variant="destructive">
+          Cancel
+      </tillo-button>
+    </div>
+  `
+}}</Story>
+
+
+### Small with destrctive variant + outline
+```html
+<tillo-button 
+  size="small" 
+  variant="destructive"
+  outline>
+    Cancel
+</tillo-button>
+```
+<Story name='Small' component='tilloButton' height='100px'>{{
+  methods: {
+    click: action('Button was clicked')
+  },
+  components: {
+    tilloButton
+  },
+  template:`
+    <div>
+      <tillo-button
+        @click="click"
+        size="small"
+        variant="destructive"
+        outline>
+          Cancel
+      </tillo-button>
+    </div>
+  `
+}}</Story>

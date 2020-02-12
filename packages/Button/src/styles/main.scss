@@ -17,6 +17,8 @@
 // Simple base styles. Leave please.
 @mixin button () {
   display: flex;
+  text-decoration: none;
+  font-family: 'Roboto';
   justify-content: flex-start;
   text-transform: uppercase;
   align-items: center;
