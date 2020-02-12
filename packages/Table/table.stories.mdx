@@ -1,0 +1,37 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import tilloTable from './src/Table.vue';
+import {entries, headings} from './assets/data'
+
+<Meta title='Table' component={tilloTable} />
+
+# Data table
+
+Main component used for tables. Only does what it needs to do, in terms of displaying data.<br />
+This means it will handle scrolling and column configuration for you, but will not handle<br />
+pagination and various breakpoints.
+<br />
+
+## Props
+<Props of={tilloTable} />
+
+## Stories
+<br />
+
+### Automatic mode
+<Story name='Automatic' height='200px'>{{
+  data () {
+    return {
+      headings: headings,
+      entries: entries
+    }    
+  },
+  components: { tilloTable },
+  template: `
+    <tillo-table
+      id="auto-a"
+      :headings='headings'
+      :entries='entries'>
+    </tillo-table>
+  `,
+}}</Story>
+
