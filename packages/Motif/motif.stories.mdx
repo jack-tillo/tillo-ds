@@ -1,0 +1,123 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import Motif from './src/Motif.vue';
+import '!style-loader!css-loader!sass-loader!./src/styles/storybook.scss';
+
+<Meta title='Motif' component={Motif} />
+
+# Motif
+
+## Props
+<Props of={Motif} />
+
+## Examples
+Sizes used here might not be exact. 
+Use whatever Size is appropriate for your app.<br />
+Define a class and apply it to your motif:
+```css
+.icon {
+  width: 30px;
+  height: 30px;
+}
+```
+```html
+<motif class="icon" type="api" />
+```
+
+### API motif.
+
+<Story name='api' height='50px'>{{
+  components: { Motif },
+  template: '<motif class="default" type="api" />',
+}}</Story>
+
+```html
+<motif type="api" />
+```
+
+---
+### Cross motif.
+
+<Story name='cross' height='80px'>{{
+  components: { Motif },
+  template: `
+  <div>
+    <motif class="default" type="cross" />
+    <motif class="default large" type="cross" />
+  </div>
+  `,
+}}</Story>
+
+```html
+<motif type="cross" />
+<!-- 
+Note the 'large' class is not part of the component.
+It's simply to illustrate how your classes can still 
+affect a component
+ -->
+<motif class="large" type="cross" />
+```
+---
+### Any spinning motif.
+
+<Story name='spinner' height='80px'>{{
+  components: { Motif },
+  template: '<motif style="color:green;" class="default large" type="ip_trace" spinner />',
+}}</Story>
+
+```html
+<motif style="color:green;" type="ip_trace" spinner/>
+```
+---
+### Current list of types.
+api,
+brands,
+bulk_buy,
+calculator,
+calendar,
+cart,
+chevron,
+copy,
+copied,
+clock,
+cross,
+cross_circle,
+dashboard,
+document,
+download,
+edit,
+exit,
+external_link,
+files,
+gauge,
+gift_tag,
+graph,
+hourglass,
+ip_trace,
+lock,
+mixer,
+no_entry,
+pen_and_paper,
+people,
+plus_circle,
+q_and_a,
+query,
+search,
+shape_circle,
+spanner,
+staff,
+starred,
+stopwatch,
+temple,
+tick,
+ticket,
+tie,
+tip_filled,
+tip_outline,
+traffic_light,
+transfer,
+upload,
+user,
+vault,
+wallet,
+bin,
+large_spinner
